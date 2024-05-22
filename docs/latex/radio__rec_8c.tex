@@ -1,0 +1,133 @@
+\doxysection{C\+:/\+Users/\+Aaron Escamilla/\+STM32\+Cube\+IDE/workspace\+\_\+1.15.0/lab\+\_\+3/\+Core/\+Src/radio\+\_\+rec.c File Reference}
+\hypertarget{radio__rec_8c}{}\label{radio__rec_8c}\index{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Src/radio\_rec.c@{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Src/radio\_rec.c}}
+
+
+\+: Radio receiver implementation  
+
+
+{\ttfamily \#include "{}radio\+\_\+rec.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__rec_8c_a23a15b5ea93704affd4a465a149f57d9}{get\+\_\+1}} (\mbox{\hyperlink{structradio}{radio}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structradio}{radio}})
+\begin{DoxyCompactList}\small\item\em Get the PWM capture value for channel 1. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__rec_8c_a46b20f8df51cf601bab1bff0c9481bf8}{get\+\_\+2}} (\mbox{\hyperlink{structradio}{radio}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structradio}{radio}})
+\begin{DoxyCompactList}\small\item\em Get the PWM capture value for channel 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{radio__rec_8c_a8cdab81096dbd216384893d024fcb658}{rising\+\_\+1}} = 1
+\item 
+int \mbox{\hyperlink{radio__rec_8c_a4275ea090d8489f1c296d85a0e7b867e}{rising\+\_\+2}} = 1
+\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__rec_8c_aa2200c2b37fc45ca844a1eb43db6a716}{cap\+\_\+1}} = 1500
+\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__rec_8c_a6c53c0a37ddf81cf74b414c5928417ac}{cap\+\_\+2}} = 1500
+\item 
+\Hypertarget{radio__rec_8c_a3a708f17b70fd9d746b2211354f9277e}\label{radio__rec_8c_a3a708f17b70fd9d746b2211354f9277e} 
+uint32\+\_\+t {\bfseries rise\+\_\+1}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__rec_8c_a9daad78047ebd22a95a39f01ddc71aeb}{rise\+\_\+2}}
+\item 
+\Hypertarget{radio__rec_8c_a5dd45345db8622f56df01582f22a3b94}\label{radio__rec_8c_a5dd45345db8622f56df01582f22a3b94} 
+uint32\+\_\+t {\bfseries fall\+\_\+1}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__rec_8c_a4d7362b516401686a180e0a8cbc94b06}{fall\+\_\+2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Radio receiver implementation 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file contains the implementation of functions to read PWM signals from a radio receiver. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{radio__rec_8c_a23a15b5ea93704affd4a465a149f57d9}\label{radio__rec_8c_a23a15b5ea93704affd4a465a149f57d9} 
+\index{radio\_rec.c@{radio\_rec.c}!get\_1@{get\_1}}
+\index{get\_1@{get\_1}!radio\_rec.c@{radio\_rec.c}}
+\doxysubsubsection{\texorpdfstring{get\_1()}{get\_1()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structradio}{radio}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
+
+
+
+Get the PWM capture value for channel 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the radio structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Captured} & PWM value (range from 1000 to 2000) \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function reads the captured PWM value for channel 1 and processes it to determine the pulse width. 
+\end{DoxyNote}
+\Hypertarget{radio__rec_8c_a46b20f8df51cf601bab1bff0c9481bf8}\label{radio__rec_8c_a46b20f8df51cf601bab1bff0c9481bf8} 
+\index{radio\_rec.c@{radio\_rec.c}!get\_2@{get\_2}}
+\index{get\_2@{get\_2}!radio\_rec.c@{radio\_rec.c}}
+\doxysubsubsection{\texorpdfstring{get\_2()}{get\_2()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structradio}{radio}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
+
+
+
+Get the PWM capture value for channel 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the radio structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Captured} & PWM value (range from 1000 to 2000) \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function reads the captured PWM value for channel 2 and processes it to determine the pulse width. 
+\end{DoxyNote}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{radio__rec_8c_aa2200c2b37fc45ca844a1eb43db6a716}\label{radio__rec_8c_aa2200c2b37fc45ca844a1eb43db6a716} 
+\index{radio\_rec.c@{radio\_rec.c}!cap\_1@{cap\_1}}
+\index{cap\_1@{cap\_1}!radio\_rec.c@{radio\_rec.c}}
+\doxysubsubsection{\texorpdfstring{cap\_1}{cap\_1}}
+{\footnotesize\ttfamily uint32\+\_\+t cap\+\_\+1 = 1500}
+
+Initializes PWM capture for channel 1 at neutral value (1500) \Hypertarget{radio__rec_8c_a6c53c0a37ddf81cf74b414c5928417ac}\label{radio__rec_8c_a6c53c0a37ddf81cf74b414c5928417ac} 
+\index{radio\_rec.c@{radio\_rec.c}!cap\_2@{cap\_2}}
+\index{cap\_2@{cap\_2}!radio\_rec.c@{radio\_rec.c}}
+\doxysubsubsection{\texorpdfstring{cap\_2}{cap\_2}}
+{\footnotesize\ttfamily uint32\+\_\+t cap\+\_\+2 = 1500}
+
+Initializes PWM capture for channel 2 at neutral value (1500) \Hypertarget{radio__rec_8c_a4d7362b516401686a180e0a8cbc94b06}\label{radio__rec_8c_a4d7362b516401686a180e0a8cbc94b06} 
+\index{radio\_rec.c@{radio\_rec.c}!fall\_2@{fall\_2}}
+\index{fall\_2@{fall\_2}!radio\_rec.c@{radio\_rec.c}}
+\doxysubsubsection{\texorpdfstring{fall\_2}{fall\_2}}
+{\footnotesize\ttfamily uint32\+\_\+t fall\+\_\+2}
+
+Track ticks corresponding to fall edges \Hypertarget{radio__rec_8c_a9daad78047ebd22a95a39f01ddc71aeb}\label{radio__rec_8c_a9daad78047ebd22a95a39f01ddc71aeb} 
+\index{radio\_rec.c@{radio\_rec.c}!rise\_2@{rise\_2}}
+\index{rise\_2@{rise\_2}!radio\_rec.c@{radio\_rec.c}}
+\doxysubsubsection{\texorpdfstring{rise\_2}{rise\_2}}
+{\footnotesize\ttfamily uint32\+\_\+t rise\+\_\+2}
+
+Track ticks corresponding to rise edges \Hypertarget{radio__rec_8c_a8cdab81096dbd216384893d024fcb658}\label{radio__rec_8c_a8cdab81096dbd216384893d024fcb658} 
+\index{radio\_rec.c@{radio\_rec.c}!rising\_1@{rising\_1}}
+\index{rising\_1@{rising\_1}!radio\_rec.c@{radio\_rec.c}}
+\doxysubsubsection{\texorpdfstring{rising\_1}{rising\_1}}
+{\footnotesize\ttfamily int rising\+\_\+1 = 1}
+
+Keeps track of edges for channel 1 \Hypertarget{radio__rec_8c_a4275ea090d8489f1c296d85a0e7b867e}\label{radio__rec_8c_a4275ea090d8489f1c296d85a0e7b867e} 
+\index{radio\_rec.c@{radio\_rec.c}!rising\_2@{rising\_2}}
+\index{rising\_2@{rising\_2}!radio\_rec.c@{radio\_rec.c}}
+\doxysubsubsection{\texorpdfstring{rising\_2}{rising\_2}}
+{\footnotesize\ttfamily int rising\+\_\+2 = 1}
+
+Keeps track of edges for channel 2 

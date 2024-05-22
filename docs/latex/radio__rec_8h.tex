@@ -1,0 +1,79 @@
+\doxysection{C\+:/\+Users/\+Aaron Escamilla/\+STM32\+Cube\+IDE/workspace\+\_\+1.15.0/lab\+\_\+3/\+Core/\+Inc/radio\+\_\+rec.h File Reference}
+\hypertarget{radio__rec_8h}{}\label{radio__rec_8h}\index{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Inc/radio\_rec.h@{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Inc/radio\_rec.h}}
+
+
+\+: Header file for radio receiver functions  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structradio}{radio}}
+\begin{DoxyCompactList}\small\item\em Radio object data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__rec_8h_a23a15b5ea93704affd4a465a149f57d9}{get\+\_\+1}} (\mbox{\hyperlink{structradio}{radio}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structradio}{radio}})
+\begin{DoxyCompactList}\small\item\em Get the PWM capture value for channel 1. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__rec_8h_a46b20f8df51cf601bab1bff0c9481bf8}{get\+\_\+2}} (\mbox{\hyperlink{structradio}{radio}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structradio}{radio}})
+\begin{DoxyCompactList}\small\item\em Get the PWM capture value for channel 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header file for radio receiver functions 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file contains the definitions and function prototypes for capturing PWM signals from a radio receiver. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{radio__rec_8h_a23a15b5ea93704affd4a465a149f57d9}\label{radio__rec_8h_a23a15b5ea93704affd4a465a149f57d9} 
+\index{radio\_rec.h@{radio\_rec.h}!get\_1@{get\_1}}
+\index{get\_1@{get\_1}!radio\_rec.h@{radio\_rec.h}}
+\doxysubsubsection{\texorpdfstring{get\_1()}{get\_1()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structradio}{radio}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
+
+
+
+Get the PWM capture value for channel 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the radio structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Captured} & PWM value (range from 1000 to 2000) \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function reads the captured PWM value for channel 1 and processes it to determine the pulse width. 
+\end{DoxyNote}
+\Hypertarget{radio__rec_8h_a46b20f8df51cf601bab1bff0c9481bf8}\label{radio__rec_8h_a46b20f8df51cf601bab1bff0c9481bf8} 
+\index{radio\_rec.h@{radio\_rec.h}!get\_2@{get\_2}}
+\index{get\_2@{get\_2}!radio\_rec.h@{radio\_rec.h}}
+\doxysubsubsection{\texorpdfstring{get\_2()}{get\_2()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structradio}{radio}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
+
+
+
+Get the PWM capture value for channel 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the radio structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Captured} & PWM value (range from 1000 to 2000) \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function reads the captured PWM value for channel 2 and processes it to determine the pulse width. 
+\end{DoxyNote}

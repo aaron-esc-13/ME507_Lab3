@@ -1,37 +1,32 @@
 \doxysection{radio\+\_\+rec.\+h}
-\hypertarget{radio__rec_8h_source}{}\label{radio__rec_8h_source}\index{Inc/radio\_rec.h@{Inc/radio\_rec.h}}
-
+\hypertarget{radio__rec_8h_source}{}\label{radio__rec_8h_source}\index{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Inc/radio\_rec.h@{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Inc/radio\_rec.h}}
+\mbox{\hyperlink{radio__rec_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
-\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ radio\_rec.h}}
-\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
-\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 16,\ 2024}}
-\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Aaron\ Escamilla}}
-\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_RADIO\_REC\_H\_}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_RADIO\_REC\_H\_}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{comment}{//\ Motor\ object\ data\ structure}}
-\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00017\ \ \ \ \ TIM\_HandleTypeDef\ *\ \ timer;}
-\DoxyCodeLine{00018\ \ \ \ \ uint32\_t\ channel\_1;}
-\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ \ uint32\_t\ channel\_2;}}
-\DoxyCodeLine{00020\ \}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structradio}{radio}};}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{comment}{//Prototype\ for\ getting\ input\ capture\ on\ chan\ 1}}
-\DoxyCodeLine{00024\ uint32\_t\ get\_1(\mbox{\hyperlink{structradio}{radio}}*\mbox{\hyperlink{structradio}{radio}});}
-\DoxyCodeLine{00025\ uint32\_t\ get\_2(\mbox{\hyperlink{structradio}{radio}}*\mbox{\hyperlink{structradio}{radio}});}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ INC\_RADIO\_REC\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ INC\_RADIO\_REC\_H\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ Motor\ object\ data\ structure}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00026\ \ \ \ \ TIM\_HandleTypeDef\ *\mbox{\hyperlink{structradio_a30b15aedcc086ca7abb69f7ac012ce64}{timer}};\ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structradio_aa509d1661e246fabba91ab9bba064e98}{channel\_1}};\ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structradio}{radio}};}
 \DoxyCodeLine{00029\ }
 \DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_RADIO\_REC\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//Prototype\ for\ getting\ input\ capture\ on\ chan\ 1}}
+\DoxyCodeLine{00039\ uint32\_t\ \mbox{\hyperlink{radio__rec_8h_a23a15b5ea93704affd4a465a149f57d9}{get\_1}}(\mbox{\hyperlink{structradio}{radio}}*\mbox{\hyperlink{structradio}{radio}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//Prototype\ for\ getting\ input\ capture\ on\ chan\ 2}}
+\DoxyCodeLine{00049\ uint32\_t\ \mbox{\hyperlink{radio__rec_8h_a46b20f8df51cf601bab1bff0c9481bf8}{get\_2}}(\mbox{\hyperlink{structradio}{radio}}*\mbox{\hyperlink{structradio}{radio}});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_RADIO\_REC\_H\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

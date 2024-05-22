@@ -1,5 +1,5 @@
-\doxysection{Src/motor\+\_\+driver3.c File Reference}
-\hypertarget{motor__driver3_8c}{}\label{motor__driver3_8c}\index{Src/motor\_driver3.c@{Src/motor\_driver3.c}}
+\doxysection{C\+:/\+Users/\+Aaron Escamilla/\+STM32\+Cube\+IDE/workspace\+\_\+1.15.0/lab\+\_\+3/\+Core/\+Src/motor\+\_\+driver3.c File Reference}
+\hypertarget{motor__driver3_8c}{}\label{motor__driver3_8c}\index{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Src/motor\_driver3.c@{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Src/motor\_driver3.c}}
 
 
 \+: Motor driver implementation  
@@ -13,12 +13,10 @@
 \item 
 void \mbox{\hyperlink{motor__driver3_8c_a5932755d5fbbcb4797e9b515768d71b4}{set\+\_\+duty\+\_\+cycle}} (\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}mot, int32\+\_\+t duty)
 \begin{DoxyCompactList}\small\item\em Set the duty cycle of the motor. \end{DoxyCompactList}\item 
-\Hypertarget{motor__driver3_8c_a333a2e96b5c60eda2d67d9fe47e24981}\label{motor__driver3_8c_a333a2e96b5c60eda2d67d9fe47e24981} 
-void {\bfseries motor\+\_\+disable} (\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}mot)
-\item 
-\Hypertarget{motor__driver3_8c_a9313eaeb7403e1190c334be442bd033e}\label{motor__driver3_8c_a9313eaeb7403e1190c334be442bd033e} 
-void {\bfseries motor\+\_\+enable} (\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}mot)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{motor__driver3_8c_a333a2e96b5c60eda2d67d9fe47e24981}{motor\+\_\+disable}} (\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}mot)
+\begin{DoxyCompactList}\small\item\em Disable the motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motor__driver3_8c_a9313eaeb7403e1190c334be442bd033e}{motor\+\_\+enable}} (\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}mot)
+\begin{DoxyCompactList}\small\item\em Enable the motor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -30,6 +28,52 @@ void {\bfseries motor\+\_\+enable} (\mbox{\hyperlink{structmotor}{motor}} \texor
 This file contains the implementation of motor driver functions. 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{motor__driver3_8c_a333a2e96b5c60eda2d67d9fe47e24981}\label{motor__driver3_8c_a333a2e96b5c60eda2d67d9fe47e24981} 
+\index{motor\_driver3.c@{motor\_driver3.c}!motor\_disable@{motor\_disable}}
+\index{motor\_disable@{motor\_disable}!motor\_driver3.c@{motor\_driver3.c}}
+\doxysubsubsection{\texorpdfstring{motor\_disable()}{motor\_disable()}}
+{\footnotesize\ttfamily void motor\+\_\+disable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}}]{mot }\end{DoxyParamCaption})}
+
+
+
+Disable the motor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot} & Pointer to the motor structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function stops the PWM signals, effectively disabling the motor. 
+\end{DoxyNote}
+\Hypertarget{motor__driver3_8c_a9313eaeb7403e1190c334be442bd033e}\label{motor__driver3_8c_a9313eaeb7403e1190c334be442bd033e} 
+\index{motor\_driver3.c@{motor\_driver3.c}!motor\_enable@{motor\_enable}}
+\index{motor\_enable@{motor\_enable}!motor\_driver3.c@{motor\_driver3.c}}
+\doxysubsubsection{\texorpdfstring{motor\_enable()}{motor\_enable()}}
+{\footnotesize\ttfamily void motor\+\_\+enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}}]{mot }\end{DoxyParamCaption})}
+
+
+
+Enable the motor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot} & Pointer to the motor structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function starts the PWM signals, enabling the motor. 
+\end{DoxyNote}
 \Hypertarget{motor__driver3_8c_a5932755d5fbbcb4797e9b515768d71b4}\label{motor__driver3_8c_a5932755d5fbbcb4797e9b515768d71b4} 
 \index{motor\_driver3.c@{motor\_driver3.c}!set\_duty\_cycle@{set\_duty\_cycle}}
 \index{set\_duty\_cycle@{set\_duty\_cycle}!motor\_driver3.c@{motor\_driver3.c}}

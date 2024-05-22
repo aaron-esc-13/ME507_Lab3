@@ -1,5 +1,5 @@
-\doxysection{Src/main.c File Reference}
-\hypertarget{main_8c}{}\label{main_8c}\index{Src/main.c@{Src/main.c}}
+\doxysection{C\+:/\+Users/\+Aaron Escamilla/\+STM32\+Cube\+IDE/workspace\+\_\+1.15.0/lab\+\_\+3/\+Core/\+Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Src/main.c@{C:/Users/Aaron Escamilla/STM32CubeIDE/workspace\_1.15.0/lab\_3/Core/Src/main.c}}
 
 
 \+: Main program body for controlling motors using PWM signals and capturing input from a remote control.  
@@ -27,8 +27,9 @@ void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Ha
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-TIM\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a25fc663547539bc49fecc0011bd76ab5}{htim1}}
-\begin{DoxyCompactList}\small\item\em Private includes for additional libraries and drivers. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim1}
+\item 
 \Hypertarget{main_8c_a2c80fd5510e2990a59a5c90d745c716c}\label{main_8c_a2c80fd5510e2990a59a5c90d745c716c} 
 TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim2}
 \item 
@@ -42,7 +43,7 @@ TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim4}
 UART\+\_\+\+Handle\+Type\+Def {\bfseries huart2}
 \item 
 unsigned int \mbox{\hyperlink{main_8c_ab619de085f288a845965b7c07689df34}{value\+\_\+1}} = 0
-\begin{DoxyCompactList}\small\item\em User-\/defined private variables. \end{DoxyCompactList}\item 
+\item 
 unsigned int \mbox{\hyperlink{main_8c_a7d2c80929862de508d2c98945e1a49dd}{value\+\_\+2}} = 0
 \item 
 bool \mbox{\hyperlink{main_8c_a0afdb96c929e70881aedcc7f14844cf4}{int\+\_\+flg1}}
@@ -167,17 +168,7 @@ To store and track elapsed time \Hypertarget{main_8c_a204a3f4fa39b9c007f9784d3e4
 \doxysubsubsection{\texorpdfstring{end}{end}}
 {\footnotesize\ttfamily uint32\+\_\+t end}
 
-Variables to track time for printing purposes \Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5} 
-\index{main.c@{main.c}!htim1@{htim1}}
-\index{htim1@{htim1}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{htim1}{htim1}}
-{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim1}
-
-
-
-Private includes for additional libraries and drivers. 
-
-Private variables for timers and UART. \Hypertarget{main_8c_a0afdb96c929e70881aedcc7f14844cf4}\label{main_8c_a0afdb96c929e70881aedcc7f14844cf4} 
+Variables to track time for printing purposes \Hypertarget{main_8c_a0afdb96c929e70881aedcc7f14844cf4}\label{main_8c_a0afdb96c929e70881aedcc7f14844cf4} 
 \index{main.c@{main.c}!int\_flg1@{int\_flg1}}
 \index{int\_flg1@{int\_flg1}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{int\_flg1}{int\_flg1}}
@@ -200,10 +191,6 @@ Storage for printing over UART \Hypertarget{main_8c_ab619de085f288a845965b7c0768
 \index{value\_1@{value\_1}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{value\_1}{value\_1}}
 {\footnotesize\ttfamily unsigned int value\+\_\+1 = 0}
-
-
-
-User-\/defined private variables. 
 
 Stores PWM width from remote channel 1 \Hypertarget{main_8c_a7d2c80929862de508d2c98945e1a49dd}\label{main_8c_a7d2c80929862de508d2c98945e1a49dd} 
 \index{main.c@{main.c}!value\_2@{value\_2}}

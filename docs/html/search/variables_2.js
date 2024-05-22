@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['htim1_0',['htim1',['../main_8c.html#a25fc663547539bc49fecc0011bd76ab5',1,'main.c']]]
+  ['duty_0',['duty',['../structmotor.html#ab6a8993805fd7b50a32669337ca3a37a',1,'motor']]]
 ];

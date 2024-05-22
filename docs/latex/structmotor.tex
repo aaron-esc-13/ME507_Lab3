@@ -1,22 +1,57 @@
 \doxysection{motor Struct Reference}
 \hypertarget{structmotor}{}\label{structmotor}\index{motor@{motor}}
+
+
+Motor object data structure.  
+
+
+
+
+{\ttfamily \#include $<$motor\+\_\+driver3.\+h$>$}
+
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structmotor_ab6a8993805fd7b50a32669337ca3a37a}\label{structmotor_ab6a8993805fd7b50a32669337ca3a37a} 
-int32\+\_\+t {\bfseries duty}
+int32\+\_\+t \mbox{\hyperlink{structmotor_ab6a8993805fd7b50a32669337ca3a37a}{duty}}
 \item 
-\Hypertarget{structmotor_a30b15aedcc086ca7abb69f7ac012ce64}\label{structmotor_a30b15aedcc086ca7abb69f7ac012ce64} 
-TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries timer}
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmotor_a30b15aedcc086ca7abb69f7ac012ce64}{timer}}
 \item 
-\Hypertarget{structmotor_aa509d1661e246fabba91ab9bba064e98}\label{structmotor_aa509d1661e246fabba91ab9bba064e98} 
-uint32\+\_\+t {\bfseries channel\+\_\+1}
+uint32\+\_\+t \mbox{\hyperlink{structmotor_aa509d1661e246fabba91ab9bba064e98}{channel\+\_\+1}}
 \item 
-\Hypertarget{structmotor_a3757efc6831287e526c7f85da5383447}\label{structmotor_a3757efc6831287e526c7f85da5383447} 
-uint32\+\_\+t {\bfseries channel\+\_\+2}
+uint32\+\_\+t \mbox{\hyperlink{structmotor_a3757efc6831287e526c7f85da5383447}{channel\+\_\+2}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Motor object data structure. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structmotor_aa509d1661e246fabba91ab9bba064e98}\label{structmotor_aa509d1661e246fabba91ab9bba064e98} 
+\index{motor@{motor}!channel\_1@{channel\_1}}
+\index{channel\_1@{channel\_1}!motor@{motor}}
+\doxysubsubsection{\texorpdfstring{channel\_1}{channel\_1}}
+{\footnotesize\ttfamily uint32\+\_\+t channel\+\_\+1}
+
+Timer channel 1 used for PWM output \Hypertarget{structmotor_a3757efc6831287e526c7f85da5383447}\label{structmotor_a3757efc6831287e526c7f85da5383447} 
+\index{motor@{motor}!channel\_2@{channel\_2}}
+\index{channel\_2@{channel\_2}!motor@{motor}}
+\doxysubsubsection{\texorpdfstring{channel\_2}{channel\_2}}
+{\footnotesize\ttfamily uint32\+\_\+t channel\+\_\+2}
+
+Timer channel 2 used for PWM output \Hypertarget{structmotor_ab6a8993805fd7b50a32669337ca3a37a}\label{structmotor_ab6a8993805fd7b50a32669337ca3a37a} 
+\index{motor@{motor}!duty@{duty}}
+\index{duty@{duty}!motor@{motor}}
+\doxysubsubsection{\texorpdfstring{duty}{duty}}
+{\footnotesize\ttfamily int32\+\_\+t duty}
+
+Duty cycle for the motor (range from 0 to 100\%) \Hypertarget{structmotor_a30b15aedcc086ca7abb69f7ac012ce64}\label{structmotor_a30b15aedcc086ca7abb69f7ac012ce64} 
+\index{motor@{motor}!timer@{timer}}
+\index{timer@{timer}!motor@{motor}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} timer}
+
+Timer handle used for PWM generation 
+
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Inc/motor\+\_\+driver3.\+h\end{DoxyCompactItemize}
+C\+:/\+Users/\+Aaron Escamilla/\+STM32\+Cube\+IDE/workspace\+\_\+1.\+15.\+0/lab\+\_\+3/\+Core/\+Inc/\mbox{\hyperlink{motor__driver3_8h}{motor\+\_\+driver3.\+h}}\end{DoxyCompactItemize}

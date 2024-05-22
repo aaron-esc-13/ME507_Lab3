@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['int_5fflg1_0',['int_flg1',['../main_8c.html#a0afdb96c929e70881aedcc7f14844cf4',1,'main.c']]],
-  ['int_5fflg2_1',['int_flg2',['../main_8c.html#af792b986cdb7b0f65b526c209b185730',1,'main.c']]]
+  ['get_5f1_0',['get_1',['../radio__rec_8c.html#a23a15b5ea93704affd4a465a149f57d9',1,'get_1(radio *radio):&#160;radio_rec.c'],['../radio__rec_8h.html#a23a15b5ea93704affd4a465a149f57d9',1,'get_1(radio *radio):&#160;radio_rec.c']]],
+  ['get_5f2_1',['get_2',['../radio__rec_8c.html#a46b20f8df51cf601bab1bff0c9481bf8',1,'get_2(radio *radio):&#160;radio_rec.c'],['../radio__rec_8h.html#a46b20f8df51cf601bab1bff0c9481bf8',1,'get_2(radio *radio):&#160;radio_rec.c']]]
 ];
