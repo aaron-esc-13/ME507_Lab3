@@ -1,0 +1,41 @@
+\doxysection{motor\+\_\+driver3.\+h}
+\hypertarget{motor__driver3_8h_source}{}\label{motor__driver3_8h_source}\index{Inc/motor\_driver3.h@{Inc/motor\_driver3.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ motor\_driver.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Apr\ 19,\ 2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Aaron\ Escamilla}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_MOTOR\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_MOTOR\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Motor\ object\ data\ structure}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00017\ \ \ \ \ int32\_t\ \ duty;}
+\DoxyCodeLine{00018\ \ \ \ \ TIM\_HandleTypeDef\ *\ \ timer;}
+\DoxyCodeLine{00019\ \ \ \ \ uint32\_t\ channel\_1;}
+\DoxyCodeLine{00020\ \ \ \ \ uint32\_t\ channel\_2;}
+\DoxyCodeLine{00021\ \}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structmotor}{motor}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//Prototype\ for\ motor\ initialization}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//Prototype\ for\ motor\ disable}}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ motor\_enable(\mbox{\hyperlink{structmotor}{motor}}*mot);\textcolor{comment}{//,int32\_t\ channel\_1,int32\_t\ channel\_2);}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//Prototype\ for\ motor\ enable}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ motor\_disable(\mbox{\hyperlink{structmotor}{motor}}*mot);\textcolor{comment}{//,int32\_t\ channel\_1,int32\_t\ channel\_2);}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Prototype\ for\ motor\ object\ "{}method"{}}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{motor__driver3_8c_a5932755d5fbbcb4797e9b515768d71b4}{set\_duty\_cycle}}(\mbox{\hyperlink{structmotor}{motor}}*mot,\ int32\_t\ duty);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_MOTOR\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
