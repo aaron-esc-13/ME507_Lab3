@@ -1,0 +1,57 @@
+\doxysection{Src/motor\+\_\+driver3.c File Reference}
+\hypertarget{motor__driver3_8c}{}\label{motor__driver3_8c}\index{Src/motor\_driver3.c@{Src/motor\_driver3.c}}
+
+
+\+: Motor driver implementation  
+
+
+{\ttfamily \#include "{}motor\+\_\+driver3.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{motor__driver3_8c_a5932755d5fbbcb4797e9b515768d71b4}{set\+\_\+duty\+\_\+cycle}} (\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}mot, int32\+\_\+t duty)
+\begin{DoxyCompactList}\small\item\em Set the duty cycle of the motor. \end{DoxyCompactList}\item 
+\Hypertarget{motor__driver3_8c_a333a2e96b5c60eda2d67d9fe47e24981}\label{motor__driver3_8c_a333a2e96b5c60eda2d67d9fe47e24981} 
+void {\bfseries motor\+\_\+disable} (\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}mot)
+\item 
+\Hypertarget{motor__driver3_8c_a9313eaeb7403e1190c334be442bd033e}\label{motor__driver3_8c_a9313eaeb7403e1190c334be442bd033e} 
+void {\bfseries motor\+\_\+enable} (\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}mot)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Motor driver implementation 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file contains the implementation of motor driver functions. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{motor__driver3_8c_a5932755d5fbbcb4797e9b515768d71b4}\label{motor__driver3_8c_a5932755d5fbbcb4797e9b515768d71b4} 
+\index{motor\_driver3.c@{motor\_driver3.c}!set\_duty\_cycle@{set\_duty\_cycle}}
+\index{set\_duty\_cycle@{set\_duty\_cycle}!motor\_driver3.c@{motor\_driver3.c}}
+\doxysubsubsection{\texorpdfstring{set\_duty\_cycle()}{set\_duty\_cycle()}}
+{\footnotesize\ttfamily void set\+\_\+duty\+\_\+cycle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmotor}{motor}} \texorpdfstring{$\ast$}{*}}]{mot,  }\item[{int32\+\_\+t}]{duty }\end{DoxyParamCaption})}
+
+
+
+Set the duty cycle of the motor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot} & Pointer to the motor structure \\
+\hline
+{\em duty} & Desired duty cycle (range from 1000 to 2000) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+This function calculates the PWM values for the motor and updates the timer compare registers to set the motor speed and direction. 
+\end{DoxyNote}

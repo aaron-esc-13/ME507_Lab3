@@ -1,0 +1,214 @@
+\doxysection{Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{Src/main.c@{Src/main.c}}
+
+
+\+: Main program body for controlling motors using PWM signals and capturing input from a remote control.  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include "{}motor\+\_\+driver3.\+h"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include "{}radio\+\_\+rec.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Function prototypes for system configuration and initialization. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a77a2401a35ddd9bd0b8fc28331b81381}{HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Capture\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Timer input capture callback to handle interrupt flags. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+TIM\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a25fc663547539bc49fecc0011bd76ab5}{htim1}}
+\begin{DoxyCompactList}\small\item\em Private includes for additional libraries and drivers. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a2c80fd5510e2990a59a5c90d745c716c}\label{main_8c_a2c80fd5510e2990a59a5c90d745c716c} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim2}
+\item 
+\Hypertarget{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62}\label{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim3}
+\item 
+\Hypertarget{main_8c_a85788cec5a97ee377e4ee2e74f026484}\label{main_8c_a85788cec5a97ee377e4ee2e74f026484} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim4}
+\item 
+\Hypertarget{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{main_8c_aa9479c261d65eecedd3d9582f7f0f89c} 
+UART\+\_\+\+Handle\+Type\+Def {\bfseries huart2}
+\item 
+unsigned int \mbox{\hyperlink{main_8c_ab619de085f288a845965b7c07689df34}{value\+\_\+1}} = 0
+\begin{DoxyCompactList}\small\item\em User-\/defined private variables. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{main_8c_a7d2c80929862de508d2c98945e1a49dd}{value\+\_\+2}} = 0
+\item 
+bool \mbox{\hyperlink{main_8c_a0afdb96c929e70881aedcc7f14844cf4}{int\+\_\+flg1}}
+\item 
+bool \mbox{\hyperlink{main_8c_af792b986cdb7b0f65b526c209b185730}{int\+\_\+flg2}}
+\item 
+char \mbox{\hyperlink{main_8c_ac02a549f76b725558e9dc63ca585e253}{buffer}} \mbox{[}50\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_a3d8a9527a2ee4a7ebf59175650142e75}{n}}
+\item 
+\Hypertarget{main_8c_a61eb63d26b2fa6c2971603ceccffb14b}\label{main_8c_a61eb63d26b2fa6c2971603ceccffb14b} 
+uint32\+\_\+t {\bfseries start}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_a204a3f4fa39b9c007f9784d3e4af4667}{end}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_a5447466b2d96ca5324636b986f6f5af4}{elapsed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body for controlling motors using PWM signals and capturing input from a remote control. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This software component is licensed by STMicroelectronics under BSD 3-\/Clause license. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a77a2401a35ddd9bd0b8fc28331b81381}\label{main_8c_a77a2401a35ddd9bd0b8fc28331b81381} 
+\index{main.c@{main.c}!HAL\_TIM\_IC\_CaptureCallback@{HAL\_TIM\_IC\_CaptureCallback}}
+\index{HAL\_TIM\_IC\_CaptureCallback@{HAL\_TIM\_IC\_CaptureCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_IC\_CaptureCallback()}{HAL\_TIM\_IC\_CaptureCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Capture\+Callback (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim }\end{DoxyParamCaption})}
+
+
+
+Timer input capture callback to handle interrupt flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & Pointer to the timer handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em } & \\
+\hline
+\end{DoxyRetVals}
+Initialize motor and radio structures.
+
+Initialize user-\/defined flags and start timers.
+
+Main loop to handle motor control based on remote input.\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function prototypes for system configuration and initialization. 
+
+System Clock Configuration.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_ac02a549f76b725558e9dc63ca585e253}\label{main_8c_ac02a549f76b725558e9dc63ca585e253} 
+\index{main.c@{main.c}!buffer@{buffer}}
+\index{buffer@{buffer}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char buffer\mbox{[}50\mbox{]}}
+
+Character buffer for UART message display \Hypertarget{main_8c_a5447466b2d96ca5324636b986f6f5af4}\label{main_8c_a5447466b2d96ca5324636b986f6f5af4} 
+\index{main.c@{main.c}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{elapsed}{elapsed}}
+{\footnotesize\ttfamily uint32\+\_\+t elapsed}
+
+To store and track elapsed time \Hypertarget{main_8c_a204a3f4fa39b9c007f9784d3e4af4667}\label{main_8c_a204a3f4fa39b9c007f9784d3e4af4667} 
+\index{main.c@{main.c}!end@{end}}
+\index{end@{end}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily uint32\+\_\+t end}
+
+Variables to track time for printing purposes \Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5} 
+\index{main.c@{main.c}!htim1@{htim1}}
+\index{htim1@{htim1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim1}{htim1}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim1}
+
+
+
+Private includes for additional libraries and drivers. 
+
+Private variables for timers and UART. \Hypertarget{main_8c_a0afdb96c929e70881aedcc7f14844cf4}\label{main_8c_a0afdb96c929e70881aedcc7f14844cf4} 
+\index{main.c@{main.c}!int\_flg1@{int\_flg1}}
+\index{int\_flg1@{int\_flg1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{int\_flg1}{int\_flg1}}
+{\footnotesize\ttfamily bool int\+\_\+flg1}
+
+Interrupt flag for channel 1 \Hypertarget{main_8c_af792b986cdb7b0f65b526c209b185730}\label{main_8c_af792b986cdb7b0f65b526c209b185730} 
+\index{main.c@{main.c}!int\_flg2@{int\_flg2}}
+\index{int\_flg2@{int\_flg2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{int\_flg2}{int\_flg2}}
+{\footnotesize\ttfamily bool int\+\_\+flg2}
+
+Interrupt flag for channel 2 \Hypertarget{main_8c_a3d8a9527a2ee4a7ebf59175650142e75}\label{main_8c_a3d8a9527a2ee4a7ebf59175650142e75} 
+\index{main.c@{main.c}!n@{n}}
+\index{n@{n}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily uint32\+\_\+t n}
+
+Storage for printing over UART \Hypertarget{main_8c_ab619de085f288a845965b7c07689df34}\label{main_8c_ab619de085f288a845965b7c07689df34} 
+\index{main.c@{main.c}!value\_1@{value\_1}}
+\index{value\_1@{value\_1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{value\_1}{value\_1}}
+{\footnotesize\ttfamily unsigned int value\+\_\+1 = 0}
+
+
+
+User-\/defined private variables. 
+
+Stores PWM width from remote channel 1 \Hypertarget{main_8c_a7d2c80929862de508d2c98945e1a49dd}\label{main_8c_a7d2c80929862de508d2c98945e1a49dd} 
+\index{main.c@{main.c}!value\_2@{value\_2}}
+\index{value\_2@{value\_2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{value\_2}{value\_2}}
+{\footnotesize\ttfamily unsigned int value\+\_\+2 = 0}
+
+Stores PWM width from remote channel 2 

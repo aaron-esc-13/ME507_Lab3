@@ -1,0 +1,37 @@
+\doxysection{radio\+\_\+rec.\+h}
+\hypertarget{radio__rec_8h_source}{}\label{radio__rec_8h_source}\index{Inc/radio\_rec.h@{Inc/radio\_rec.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ radio\_rec.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 16,\ 2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Aaron\ Escamilla}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_RADIO\_REC\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_RADIO\_REC\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Motor\ object\ data\ structure}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00017\ \ \ \ \ TIM\_HandleTypeDef\ *\ \ timer;}
+\DoxyCodeLine{00018\ \ \ \ \ uint32\_t\ channel\_1;}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ \ uint32\_t\ channel\_2;}}
+\DoxyCodeLine{00020\ \}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structradio}{radio}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//Prototype\ for\ getting\ input\ capture\ on\ chan\ 1}}
+\DoxyCodeLine{00024\ uint32\_t\ get\_1(\mbox{\hyperlink{structradio}{radio}}*\mbox{\hyperlink{structradio}{radio}});}
+\DoxyCodeLine{00025\ uint32\_t\ get\_2(\mbox{\hyperlink{structradio}{radio}}*\mbox{\hyperlink{structradio}{radio}});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_RADIO\_REC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
